@@ -49,8 +49,8 @@ minority_class_labels = y_train2[y_train2 == 1]
 X_upsampled, y_upsampled = resample(minority_class_samples, # upsample the minority class samples
                                     minority_class_labels, # upsample labels
                                     replace=True, # add more to the original number of samples
-                                    n_samples=x_train2[y_train2 == 0].shape[0], # The n_samples argument specifies the desired number of samples, which is set to the number of samples in the majority class.
-                                    random_state=123) # The random_state=123 sets a seed for reproducibility.
+                                    n_samples=x_train2[y_train2 == 0].shape[0], # specifies the desired number of samples, set to the number of samples in the majority class.
+                                    random_state=123) # set a seed for reproducibility.
 print('Number of class 1 examples after:', X_upsampled.shape[0])
 
 # Put dataframes together again
