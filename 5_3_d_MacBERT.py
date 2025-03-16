@@ -22,15 +22,16 @@ from torch.utils.data import DataLoader
 
 
 # Load the data 
+os.chdir("/home/amueller/dta_health") # set working directory
 # Y
-y_train = pd.read_csv('/home/amueller/dta_health/y_broad_train.csv')['y_broad']
-y_test = pd.read_csv('/home/amueller/dta_health/y_broad_test.csv')['y_broad']
+y_train = pd.read_csv('./y_broad_train.csv')['y_broad']
+y_test = pd.read_csv('./y_broad_test.csv')['y_broad']
 print(y_train.value_counts())
 
 # X
-x_train = pd.read_csv('/home/amueller/dta_health/X_sen_train.csv', header=0)
-x_test = pd.read_csv('/home/amueller/dta_health/X_sen_test.csv', header=0)
-x_unlabelled = pd.read_csv('/home/amueller/dta_health/X_sen_unlabelled.csv', header=0)
+x_train = pd.read_csv('./X_sen_train.csv', header=0)
+x_test = pd.read_csv('./X_sen_test.csv', header=0)
+x_unlabelled = pd.read_csv('./X_sen_unlabelled.csv', header=0)
 print(x_test.head())
 
 
@@ -206,7 +207,7 @@ for epoch in range(epochs):
 print("recover and save the best model")
 model.load_state_dict(torch.load("best_model.pth"))
 
-torch.save(model.state_dict(), "/home/amueller/dta_health/Health_MacBERT_len300_50ep_8es.pth")
+torch.save(model.state_dict(), "./Health_MacBERT_len300_50ep_8es.pth")
 
 print("step 4: validation")
 
@@ -311,4 +312,4 @@ x_unlabelled['pred_chinMacBERT'] = predicted_labels
 x_unlabelled['pred_chinMacBERT'].value_counts()
 
 # save the data
-x_unlabelled.to_csv('/home/amueller/dta_health/X_sen_unlabelled_chinMacB.csv', index=False)
+x_unlabelled.to_csv('./X_sen_unlabelled_chinMacB.csv', index=False)
