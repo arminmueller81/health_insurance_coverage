@@ -1,7 +1,8 @@
 # health_insurance_coverage
 Document classification for Chinese health insurance coverage.
 
-This repository accompanies the technical paper "Text Mining and Document Classification Workflows for Chinese Administrative Documents" published as part of project B05 ("Dynamics of Inclusion and Generosity in China's Welfare Regime") of the Collaborative Research Centre 1342 "Global Dynamics of Social Policy" of the German Research Foundation (Project number:  374666841 – SFB 1342“) at the University of Bremen in Germany (phase 2, 2022-2025).
+This repository accompanies the technical paper "Text Mining and Document Classification Workflows for Chinese Administrative Documents" (doi: 10.26092/elib/3755) published as part of project B05 ("Dynamics of Inclusion and Generosity in China's Welfare Regime") of the Collaborative Research Centre 1342 "Global Dynamics of Social Policy" of the German Research Foundation (Project number:  374666841 – SFB 1342“) at the University of Bremen in Germany (phase 2, 2022-2025). The URL of the paper is provided below.
+
 The paper presents workflows for organizing and analyzing administrative documents in a relational database. The repository provides complementary code files, which are numbered in accordance with the sections of the paper they complement.
 First, the R files accompanying section 3 prepare the data for import into the database; and they extract a set of training data for labelling and subsequent machine learning. For details, please refer to the technical paper.
 Second, the Python files accompanying section 5 prepare the labelled data, train machine learning models, and predict on the unlabelled data.
@@ -21,4 +22,7 @@ Since the code primarily covers basic and widely applied data wrangling and mach
 When using this code or adapted versions of it for purposes in line with those of the technical paper, please cite the paper.
 
 Feedback is welcome.
+
+
+Technical paper URL: https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.socialpolicydynamics.de%2Fpublikationen%2Fsfb-1342-technical-paper-series%3Fpubl%3D12770&data=05%7C02%7Carmmueller%40constructor.university%7C5120fd84999347b6648208dd6629d7c1%7Cf78e973e5c0b4ab8bbd79887c95a8ebd%7C0%7C0%7C638779052118048035%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=YVLVmCSzKIaqFMYF9pmDv0vO8Wz0bsONxGL%2BjTHclVw%3D&reserved=0
 
